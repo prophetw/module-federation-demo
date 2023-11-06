@@ -1,0 +1,16 @@
+{
+	"scripts": {
+		"start": "webpack serve",
+		"build": "webpack build"
+	},
+	"dependencies": {
+		"copy-webpack-plugin": "^11.0.0",
+		"css-loader": "^6.8.1",
+		"html-webpack-plugin": "^5.5.3",
+		"luban_motor_sdk": "3.2.1-2.2.0-Release",
+		"style-loader": "^3.3.3",
+		"webpack": "^5.89.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1"
+	}
+}
