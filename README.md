@@ -18,3 +18,26 @@
 ### ProjBCommon 
 > 每次更新之后 pnpm build 发布到自己的服务器即可
 > 两种方式，一个是用 Luban 生成的 Build ，一个是自己下载自己配置的 webpack.config.js 进行打包
+
+
+
+
+## 使用方式
+
+```bash
+
+cd ProjBCommon
+pnpm install 
+pnpm build
+cd dist
+npx serve -p 3001 -C
+# http://localhost:3001/remoteEntry.js // module federation 访问地址 可以随意部署到服务器的任意目录下,只要能访问到即可
+
+
+cd ProjA
+pnpm install
+pnpm start
+#ProjA/webpack.config.js
+# 配置好上面 ProjBCommon 的地址
+
+```
