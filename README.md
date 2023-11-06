@@ -1,7 +1,8 @@
-# 关于 MotorSDK 独立更新
+# Webpack 5 Module Federation 方式对 MotorSDK 独立更新
 
 
-## ProjA 是依赖 ProjBCommon
+> ProjA 是依赖 ProjBCommon
+> ProjBCommon 可以是 MotorSDK 或者其他的公共库
 ### ProjBCommon 向外暴露 MotorSDK 
 > 当用户需要更新 MotorSDK 仅仅把 MotorSDK 包更新到 ProjBCommon 中即可，重新打包 ProjBCommon 即可
 > 只要 ProjBCommon 不改变 MotorSDK 的包名，没有修改API，新增API，用户就不需要重新编译 ProjA
@@ -16,3 +17,4 @@
 
 ### ProjBCommon 
 > 每次更新之后 pnpm build 发布到自己的服务器即可
+> 两种方式，一个是用 Luban 生成的 Build ，一个是自己下载自己配置的 webpack.config.js 进行打包
