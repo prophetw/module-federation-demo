@@ -25,14 +25,14 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			template: "./index.html"
     }),
-		new ModuleFederationPlugin({
-      name: 'app2',
-      filename: 'remoteEntry.js',
-			remotes: {
-				Motor: "Motor@http://localhost:3001/remoteEntry.js"
-			},
-      shared: {},
-    }),
+		// new ModuleFederationPlugin({
+    //   name: 'app2',
+    //   filename: 'remoteEntry.js',
+		// 	remotes: {
+		// 		Motor: "Motor@http://localhost:3000/v1.4.3/remoteEntry.js"
+		// 	},
+    //   shared: {},
+    // }),
 	],
 	devServer: {
 		static: {

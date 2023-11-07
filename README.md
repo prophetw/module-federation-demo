@@ -41,3 +41,30 @@ pnpm start
 # 配置好上面 ProjBCommon 的地址
 
 ```
+
+
+
+## 高级用法 动态加载 module federation 
+
+```bash
+# 1
+cd ProjBCommon
+pnpm i
+pnpm build
+mv ProjBCommon/dist nodeServe/public/v1.4.3
+
+# 2
+cd nodeServe
+pnpm i 
+pnpm start
+
+# 3
+cd ProjA
+pnpm i 
+pnpm start
+
+#  http://localhost:3002/#/modFedDynamic
+```
+
+> 这种方式的 remoteEntry.js 是通过服务端提供的，这样就可以解决缓存问题，以及不同的版本的问题，服务端修改版本。客户端运行时加载最新的版本。
+
